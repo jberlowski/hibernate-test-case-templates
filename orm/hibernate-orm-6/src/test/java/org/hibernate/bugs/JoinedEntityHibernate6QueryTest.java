@@ -37,7 +37,7 @@ public class JoinedEntityHibernate6QueryTest extends BaseCoreFunctionalTestCase 
 	// This test breaks.
 	// Removing @Inheritance(strategy = InheritanceType.JOINED) from entity makes this pass
 	@Test
-	public void hhh123NativeQuery() throws Exception {
+	public void hhh16180NativeQuery() throws Exception {
 		Session s = openSession();
 		Transaction tx = s.beginTransaction();
 		Base base = new Base(1L);
@@ -52,7 +52,7 @@ public class JoinedEntityHibernate6QueryTest extends BaseCoreFunctionalTestCase 
 
 	// This test works as expected
 	@Test
-	public void hhh123Query() throws Exception {
+	public void hhh16180Query() throws Exception {
 		Session s = openSession();
 		Transaction tx = s.beginTransaction();
 		Base base = new Base(1L);
